@@ -1,0 +1,47 @@
+.matchesContainer {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.matchesHeader {
+    text-align: center;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+.matchesTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tableHeader {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.tableCell {
+    text-align: center;
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+}
+
+.scoreCell {
+    /* Additional styling if needed */
+}
+
+.tableRow:hover {
+    background-color: #ddd;
+}
+
+.evenRow {
+    background-color: #f2f2f2;
+}

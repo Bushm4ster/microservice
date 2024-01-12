@@ -1,0 +1,116 @@
+.matchDetailsContainer {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.matchDetailsHeader {
+    color: #2c3e50;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 10px;
+}
+
+.matchDetailsItem {
+    font-family: 'Arial', sans-serif;
+    color: #34495e;
+    margin: 5px 0;
+}
+
+.matchDetailsItem .teams,
+.matchDetailsItem .date,
+.matchDetailsItem .stadium,
+.matchDetailsItem .referee {
+    font-weight: bold;
+}
+
+.teamHeader {
+    margin-top: 20px;
+    color: #27ae60;
+    font-family: 'Arial', sans-serif;
+}
+
+.playersTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+.playersTableHead {
+    background-color: #2980b9;
+}
+
+.playersTableRow .playerTableHeader {
+    text-align: center;
+    padding: 10px;
+    color: #ecf0f1;
+    font-family: 'Arial', sans-serif;
+}
+
+.playersTableBody .playerRow:nth-child(even) {
+    background-color: #ecf0f1;
+}
+
+.playerCell {
+    text-align: center;
+    padding: 8px;
+    font-family: 'Arial', sans-serif;
+    cursor: default;
+}
+
+.playersTableBody .playerRow:hover {
+    background-color: #bdc3c7;
+}
+
+.goalsHeader {
+    margin-top: 30px;
+    text-align: center;
+    color: #2c3e50;
+    font-family: 'Arial', sans-serif;
+}
+
+.goalsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.goalsTableHead {
+    background-color: #3498db;
+}
+
+.goalsTableRow .goalsTableHeader {
+    text-align: center;
+    padding: 12px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+.goalsTableBody .goalRow {
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.goalCell {
+    text-align: center;
+    padding: 15px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    cursor: default;
+    background-color: #fff;
+}
+
+.goalCell:last-child {
+    border-left: 1px solid #e1e1e1;
+}
+
+.goalsTableBody .goalRow:nth-child(even) .goalCell {
+    background-color: #f0f0f0;
+}
+
+.goalsTableBody .goalRow:hover .goalCell {
+    background-color: #dfe6e9;
+}
