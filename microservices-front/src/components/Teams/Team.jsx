@@ -1,30 +1,35 @@
-import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import './team.css';
+import api from '../../services/api';
 
 const Team = () => {
-    const [players, setPlayers] = useState(['John', 'Jane', 'Mike']);
-    const [newPlayer, setNewPlayer] = useState('');
+    const { id } = useParams();
+    const [team, setTeam] = useState({});
+    const [players, setPlayers] = useState([]);
 
-    const handleAddPlayer = () => {
-        setPlayers([...players, newPlayer]);
-        setNewPlayer('');
-    };
+    useEffect(() => {
+        api.getTeam(id)
+            .then(response => {
+                setTeam(response.data);
+                setPlayers(response.data.joueurListDTO);
+            })
+            .catch(error => {
+                console.error('Error fetching team data:', error);
+            });
+    }, [id]);
 
     return (
         <div className="team-container">
-            <h1 className="team-title">Team Players</h1>
+            <h1 className="team-title">Team Players for <span style={{ color: 'red' }}>{team.name}</span></h1>
             <ul className="player-list">
-                {players.map((player, index) => (
-                    <li key={index} className="player-item">{player}</li>
+                {players.map((player) => (
+                    <li key={player.id} className="player-item">
+                        {player.firstName} {player.lastName}
+                        <span style={{ float: 'right' }}>{player.numero}</span>
+                    </li>
                 ))}
             </ul>
-            <input
-                type="text"
-                value={newPlayer}
-                onChange={(e) => setNewPlayer(e.target.value)}
-                className="player-input"
-            />
-            <button onClick={handleAddPlayer} className="add-player-button">Add Player</button>
         </div>
     );
 };

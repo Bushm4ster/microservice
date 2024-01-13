@@ -1,0 +1,137 @@
+.players-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.players-heading {
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.players-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.players-table thead {
+    background-color: #333;
+    color: white;
+}
+
+.players-table th,
+.players-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.players-table th {
+    font-size: 1.1em;
+}
+
+.players-table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.players-table tbody tr:hover {
+    background-color: #f7f7f7;
+}
+
+.player-column,
+.team-column {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.player-name,
+.player-team {
+    font-size: 1em;
+}
+
+.add-player-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.add-player-form label {
+    display: inline-block; /* Makes the label inline with its input */
+    margin-right: 10px; /* Space between the label and the input */
+    font-weight: bold;
+    font-size: 16px;
+    vertical-align: middle; /* Aligns labels with the inputs */
+    color: #333; /* Color similar to the one used in the table header */
+}
+
+.player-input,
+.team-input,
+.number-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    vertical-align: middle; 
+}
+
+.add-player-button {
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    vertical-align: middle;
+}
+
+.add-player-button:hover {
+    background-color: #449d44;
+}
+/* Add styling for the team dropdown */
+.team-dropdown {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    vertical-align: middle;
+    background-color: white; /* Background color for dropdown */
+    color: #333; /* Text color for dropdown */
+}
+
+/* Add styling for the nation input */
+.nation-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    vertical-align: middle;
+    background-color: white; /* Background color for input */
+    color: #333; /* Text color for input */
+}
+
+/* Style for the select dropdown arrow */
+.team-dropdown::after {
+    content: '\25BC'; /* Unicode character for down arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevent click events on the arrow */
+}

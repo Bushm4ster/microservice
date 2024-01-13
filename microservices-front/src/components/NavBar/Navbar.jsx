@@ -12,6 +12,9 @@ const Navbar = () => {
                 <li className="navbar-item">
                     <Link to="/teams" className="navbar-link">Teams</Link>
                 </li>
+                <li className="navbar-item">
+                    <Link to="/players" className="navbar-link">Players</Link>
+                </li>
             </ul>
         </nav>
     );

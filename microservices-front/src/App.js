@@ -5,7 +5,7 @@ import MatchDetails from './components/MatchDetails/MatchDetails';
 import Navbar from './components/NavBar/Navbar';
 import Teams from './components/Teams/Teams';
 import Team from './components/Teams/Team';
-
+import Players from './components/Players/Players';  
 
 function App() {
   return (
@@ -17,7 +17,8 @@ function App() {
             <Route path="/" element={<Matches />} />
             <Route path="/match-details" element={<MatchDetails />} />
             <Route path="/teams" element={<Teams />}/>
-            <Route path="/team" element={<Team />}/>
+            <Route path="/team/:id" element={<Team />}/>
+            <Route path="/players" element={<Players />}/>
           </Routes>
         </Router>
       </header>

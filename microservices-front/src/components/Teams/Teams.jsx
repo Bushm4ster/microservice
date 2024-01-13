@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './teams.css';
+import api from '../../services/api'; // Import your API module from the correct path
 
 const Teams = () => {
-    const teams = [
-        { id: 1, name: 'Team A' },
-        { id: 2, name: 'Team B' },
-        { id: 3, name: 'Team C' },
-    ];
+    // Define a state variable to store the fetched teams data
+    const [teams, setTeams] = useState([]);
+
+    useEffect(() => {
+        // Use useEffect to fetch data when the component mounts
+        api.getTeams()
+            .then(response => {
+                // Update the teams state with the fetched data
+                setTeams(response.data);
+            })
+            .catch(error => {
+                console.error('Error fetching teams:', error);
+            });
+    }, []); // The empty dependency array ensures that this effect runs once on mount
 
     return (
         <div className="teams-container">
@@ -15,7 +25,8 @@ const Teams = () => {
             <ul className="teams-list">
                 {teams.map((team) => (
                     <li key={team.id} className="team-item">
-                        <Link to={`/team`} className="team-link">{team.name}</Link>
+                        {/* Link to the team's details page using the team's ID */}
+                        <Link to={`/team/${team.id}`} className="team-link">{team.name}</Link>
                     </li>
                 ))}
             </ul>
